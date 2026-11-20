@@ -1,7 +1,7 @@
 # Build report
 
 - Workbook: `data/ICGE Presidential Clemency Database - Nov 13 2026VF.xlsx`
-- Built: 2026-11-20 19:35 UTC
+- Built: 2026-11-20 19:36 UTC
 - Records in workbook: 4,960; named recipients on Search records: 3,401
 - Data through: Oct. 13, 2026; last checked against DOJ: Nov. 13, 2026
 
