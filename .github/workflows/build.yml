@@ -1,0 +1,54 @@
+name: Rebuild site
+
+# Runs whenever a workbook is uploaded to data/ (or the page designs or build script change),
+# and can be started by hand from the Actions tab ("Run workflow").
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'src/**'
+      - 'scripts/**'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history, so the build can tell which workbook was uploaded most recently
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build pages and records.json from the workbook
+        run: python scripts/build.py
+
+      - name: Show the build report on this run's page
+        if: always()
+        run: if [ -f BUILD_REPORT.md ]; then cat BUILD_REPORT.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - name: Save the rebuilt site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html records.html administrations.html classification.html methodology.html about.html records.json BUILD_REPORT.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed on the site."
+          else
+            git commit -m "Rebuild site from latest workbook"
+            git push
+          fi

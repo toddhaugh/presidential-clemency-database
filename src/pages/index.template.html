@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Presidential Clemency Database — ICGE</title>
+<script src="a35424ec-632e-4917-80d4-62ce54f38e3d"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#7A0A06}a:hover{color:#530C08}
+.skip{position:absolute;left:-10000px;top:8px}
+.skip:focus{left:16px;z-index:50;padding:10px 16px;background:#FFFFFF;color:#530C08;font-weight:700}
+:focus-visible{outline:2px solid #FFFFFF;outline-offset:0;box-shadow:0 0 0 5px #1F2328}
+[style*="overflow-x: auto"],[style*="overflow: auto"]{position:relative}
+.rule[style*="border-top"]::after{top:-2px;bottom:auto}
+.menu-btn{display:none}
+.mob{display:none}
+@media (max-width: 860px){
+.menu-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;font:600 15px 'Source Sans 3',Arial,sans-serif;color:#FFFFFF;background:transparent;border:1px solid rgba(255,255,255,.6);cursor:pointer}
+.nav{display:none!important}
+.nav.open{display:flex!important;flex-direction:column;width:100%;padding-bottom:10px;border-top:1px solid rgba(255,255,255,.2)}
+.nav.open a{padding:13px 4px!important;box-shadow:none!important;border-bottom:1px solid rgba(255,255,255,.12)}
+.nav.open a[aria-current]{border-left:3px solid #990100;padding-left:12px!important}
+.logo{height:52px!important}
+.htitle{font-size:16px!important}
+.mob{display:block}
+}
+@media (max-width: 640px){
+[style*="max-width: 1200px"]{padding-left:16px!important;padding-right:16px!important}
+h1{font-size:32px!important;line-height:1.18!important}
+h2[style*="font-size: 26px"]{font-size:22px!important}
+.hdiv{display:none!important}
+.logo{height:44px!important}
+.htitle{font-size:15px!important;max-width:150px;line-height:1.2}
+.cap1{font-size:23px!important}
+.stick>div:first-child{min-height:132px!important}
+}
+@media print{.nav,.menu-btn,.skip,.hero svg,form,footer{display:none!important}body,.hero{background:#FFFFFF!important;color:#000000!important}a{color:#000000!important}.reveal,.rise,.rise2,.rise3{animation:none!important;opacity:1!important;transform:none!important}}
+summary{cursor:pointer}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero a{color:#FFFFFF}.hero a:hover{color:#F3E6E5}
+.nl{background-image:linear-gradient(#990100,#990100);background-size:0 3px;background-repeat:no-repeat;background-position:left bottom;transition:background-size .3s ease,color .2s}
+.nl:hover{background-size:100% 3px;color:#FFFFFF}
+.btn{transition:background-color .2s,color .2s}.btn:hover{background-color:#FFFFFF;color:#3A0805}
+.rule{position:relative}
+.rule::after{content:"";position:absolute;left:0;bottom:-2px;width:96px;height:2px;background:#990100}
+.cross{transform-box:fill-box;transform-origin:center}
+.fl{transform-box:fill-box;transform-origin:center}
+.lite{fill:#FCE3C4;fill-opacity:.32}
+.flag{transform-box:fill-box;transform-origin:left center}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.tw{fill:#FCE3C4;fill-opacity:var(--o);cursor:pointer;transition:fill .2s}
+.tw.on{fill:#FFFFFF;stroke:#990100;stroke-width:2.5}
+.terms a{outline:none}
+.terms a:focus-visible{box-shadow:none}
+.terms a:focus-visible rect{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:3}
+.pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#FFFFFF;margin-right:9px;vertical-align:1px}
+.bshaft{transform-origin:bottom;transform:scaleY(var(--s))}
+.bhead{transform:translateY(var(--dy))}
+.cap1{opacity:0}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}100%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+@keyframes twon{0%{fill-opacity:0}60%{fill-opacity:.95}100%{fill-opacity:var(--o)}}
+@keyframes colgrow{from{transform:scaleY(1)}}
+@keyframes headmove{from{transform:translateY(0)}}
+@keyframes hide{from{opacity:1}to{opacity:0}}
+@property --n{syntax:'<integer>';inherits:false;initial-value:0}
+.count{--n:var(--to);counter-reset:n var(--n)}
+.count::after{content:counter(n)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes wave{0%,100%{transform:skewY(0) scaleX(1)}50%{transform:skewY(-5deg) scaleX(.94)}}
+@keyframes fillin{from{fill-opacity:0}to{fill-opacity:1}}
+@keyframes pop{0%{opacity:0;transform:scale(0) rotate(-90deg)}100%{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes liteon{0%{fill-opacity:0}60%{fill-opacity:.55}100%{fill-opacity:.32}}
+@keyframes count{from{--n:0}}
+@keyframes gx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes gy{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes par{to{transform:translateY(70px)}}
+@keyframes par2{to{transform:translateY(-40px)}}
+@media (prefers-reduced-motion: no-preference){
+.wh [pathLength]{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s cubic-bezier(.45,0,.2,1) forwards}
+.wh .late{animation-delay:.9s}
+.wh .flag{animation:fade .9s 2.1s ease both,wave 3.6s 3s ease-in-out infinite}
+.lite{fill-opacity:0;animation:liteon 1.2s var(--d) ease forwards}
+.cross{opacity:0;animation:pop .7s var(--d) cubic-bezier(.3,1.5,.5,1) forwards}
+.fl{animation:float var(--f) calc(var(--d) + .7s) ease-in-out infinite}
+.rise{animation:rise .9s ease both}
+.rise2{animation:rise .9s .15s ease both}
+.rise3{animation:rise .9s .3s ease both}
+.count{animation:count 2.2s .5s cubic-bezier(.2,.7,.2,1) both}
+.pulse{animation:pulse 2s ease-out infinite}
+.tw{fill-opacity:0;animation:twon 1.3s var(--d) ease forwards}
+.hatchin{opacity:0;animation:fade 1.8s 1.6s ease forwards}
+.rule::after{transform-origin:left;animation:gx .9s .3s cubic-bezier(.2,.7,.2,1) both}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+.growx{transform-origin:left;animation:gx linear both;animation-timeline:view();animation-range:entry 15% cover 40%}
+.growy{transform-origin:bottom;animation:gy linear both;animation-timeline:view();animation-range:entry 10% cover 40%}
+.rule::after{animation:gx linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+.par{animation:par linear both;animation-timeline:scroll();animation-range:0 700px}
+.par2{animation:par2 linear both;animation-timeline:scroll();animation-range:0 700px}
+.stick{position:sticky;top:0}
+.bshaft{animation:colgrow linear both;animation-timeline:--br;animation-range:contain 10% contain 60%}
+.bhead{animation:headmove linear both;animation-timeline:--br;animation-range:contain 10% contain 60%}
+.bfill{animation:fade linear both;animation-timeline:--br;animation-range:contain 30% contain 62%}
+.bval{animation:fade linear both;animation-timeline:--br;animation-range:contain 55% contain 72%}
+.cap1{animation:hide linear both;animation-timeline:--br;animation-range:contain 18% contain 36%}
+.cap2{animation:fade linear both;animation-timeline:--br;animation-range:contain 40% contain 58%}
+}
+}
+
+/* phone touch and readability pass */
+@media (max-width: 359px){[role="group"]:not([aria-labelledby="termlbl"]) button{white-space:normal!important;line-height:1.2}}
+@media (max-width: 640px){
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+footer a,a[style*="color: #E8D9D7"],a[style*="rgb(232, 217, 215)"],nav[aria-label="Breadcrumb"] a,h2 a,h3 a{display:inline-flex!important;align-items:center;min-height:44px}
+th button{min-height:44px!important}
+#facts + ul li{flex-direction:column!important;align-items:flex-start!important;gap:4px!important}
+#facts + ul li strong{width:auto!important;line-height:1.1!important}
+[style*="min-height: 36px"]{display:none!important}
+header > div > a:first-child{gap:10px!important;min-width:0}
+.htitle{max-width:128px!important;font-size:15px!important}
+.menu-btn{padding-left:12px!important;padding-right:12px!important;flex:none}
+[role="group"] button{white-space:nowrap;padding-left:10px!important;padding-right:10px!important;flex:1 1 auto}
+[aria-labelledby="termlbl"] button{flex:none}
+[aria-labelledby="modelbl"]{flex:1 1 100%}
+[aria-labelledby="modelbl"] button{white-space:normal;line-height:1.2}
+li img[width="112"]{width:88px!important;height:88px!important}
+footer div[style*="flex-direction: column"]{gap:0!important}
+[style*="font-size: 13px"]{font-size:14px!important}
+summary{padding-top:10px!important;padding-bottom:10px!important;min-height:44px;box-sizing:border-box}
+select,input,textarea{font-size:16px!important}
+button{min-height:44px}
+td button,td.nm button{min-height:0;padding:13px 0!important;margin:-13px 0!important}
+th[scope="row"] a,td a{display:inline-block;padding:12px 0;margin:-12px 0}
+nav li a[href^="#"]{min-height:44px;box-sizing:border-box;display:flex!important;align-items:center}
+a[style*="font-size: 15px; font-weight: 600"]{display:inline-flex;align-items:center;min-height:44px}
+}
+</style>
+</helmet>
+<div style="font-family: 'Source Sans 3', Arial, sans-serif; color: #1F2328; background: #FFFFFF; min-height: 100vh; font-variant-numeric: tabular-nums">
+<a class="skip" href="#main">Skip to main content</a>
+
+<div style="background: #3A0805; color: #E8D9D7; font-size: 14px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; min-height: 36px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px">
+<span>Institute for Corporate Governance + Ethics</span>
+<a href="about.html" style="color: #E8D9D7">Contact the research team</a>
+</div>
+</div>
+
+<header style="background: #530C08">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<a href="index.html" style="display: flex; align-items: center; gap: 18px; text-decoration: none; color: #FFFFFF; padding: 8px 0">
+<img src="56d04969-8dc2-4e21-8db3-beb1ec9b7823" alt="ICGE — Institute for Corporate Governance + Ethics" class="logo" style="height: 72px; width: auto; display: block">
+<span class="hdiv" style="width: 1px; height: 36px; background: rgba(255,255,255,0.35)"></span>
+<span class="htitle" style="font-size: 19px; font-weight: 600">Presidential Clemency Database</span>
+</a>
+<button type="button" class="menu-btn" sc-camel-on-click="{{toggleMenu}}" aria-expanded="{{menuOpen}}" aria-controls="mainnav"><svg width="18" height="14" sc-camel-view-box="0 0 18 14" aria-hidden="true"><path d="M1 1h16M1 7h16M1 13h16" stroke="#FFFFFF" stroke-width="2"></path></svg>Menu</button>
+<nav id="mainnav" aria-label="Main" class="{{navClass}}" style="display: flex; flex-wrap: wrap">
+<a href="index.html" aria-current="page" style="padding: 14px 10px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; box-shadow: inset 0 -3px 0 #FFFFFF">Overview</a>
+<a class="nl" href="records.html" style="padding: 14px 10px; font-size: 15px; font-weight: 600; text-decoration: none; color: #F3E6E5">Search records</a>
+<a class="nl" href="administrations.html" style="padding: 14px 10px; font-size: 15px; font-weight: 600; text-decoration: none; color: #F3E6E5">By administration</a>
+<a class="nl" href="classification.html" style="padding: 14px 10px; font-size: 15px; font-weight: 600; text-decoration: none; color: #F3E6E5">By classification</a>
+<a class="nl" href="methodology.html" style="padding: 14px 10px; font-size: 15px; font-weight: 600; text-decoration: none; color: #F3E6E5">Methodology</a>
+<a class="nl" href="about.html" style="padding: 14px 10px; font-size: 15px; font-weight: 600; text-decoration: none; color: #F3E6E5">About</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section class="hero" style="background: #530C08 linear-gradient(to bottom, #2A0604 0%, #3E0806 40%, #530C08 82%); color: #FFFFFF; border-top: 1px solid rgba(255,255,255,0.14); border-bottom: 4px solid #990100; overflow: hidden">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px 32px 0; display: flex; flex-wrap: wrap; align-items: stretch; gap: 24px 48px">
+<div style="flex: 1 1 460px; min-width: 0; padding-bottom: 48px; align-self: center">
+<h1 class="rise" style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 48px; line-height: 1.12; font-weight: 600; letter-spacing: -0.01em">Presidential Clemency Database</h1>
+<p class="rise2" style="margin: 18px 0 0; max-width: 560px; font-size: 18px; line-height: 1.65; color: #F3E6E5">Every pardon and commutation granted by {%presidents_word%} presidents from January 20, 1989 through {%data_through_long%}. Each grant is matched to its official source and coded as a white-collar offense or not under one published rubric, so administrations can be compared on the same terms.</p>
+<form class="rise3" sc-camel-on-submit="{{noSubmit}}" role="search" style="margin-top: 26px; max-width: 560px">
+<label for="hq" style="display: block; font-size: 15px; font-weight: 600; color: #FFFFFF">Search {%named%} named recipients</label>
+<div style="margin-top: 8px; display: flex">
+<input id="hq" type="search" value="{{hq}}" sc-camel-on-input="{{setHq}}" sc-camel-on-key-down="{{keySearch}}" sc-camel-enter-key-hint="search" placeholder="Name, offense or record number" autocomplete="off" style="flex: 1; min-width: 0; height: 48px; padding: 0 14px; font: 400 16px 'Source Sans 3', Arial, sans-serif; color: #1F2328; background: #FFFFFF; border: 1px solid #FFFFFF; box-sizing: border-box">
+<a class="btn" href="records.html" ref="{{setSearchLink}}" sc-camel-on-click="{{goSearch}}" style="display: inline-flex; align-items: center; height: 48px; padding: 0 24px; font-size: 16px; font-weight: 700; text-decoration: none; color: #FFFFFF; background: #990100; border: 1px solid #FFFFFF; box-sizing: border-box">Search</a>
+</div>
+</form>
+<p class="rise3" style="margin: 14px 0 0; font-size: 14px; color: #F3E6E5"><span class="pulse" aria-hidden="true"></span>Most recent grant: {%data_through%} <span aria-hidden="true" style="margin: 0 6px">·</span> Checked against DOJ {{checkedAgo}}</p>
+<p class="rise3" style="margin: 18px 0 0; font-size: 16px"><a href="methodology.html" style="font-weight: 600">How grants are classified</a> <span aria-hidden="true" style="color: #C9A9A6; margin: 0 10px">|</span> <a href="about.html#request" style="font-weight: 600">Request the dataset</a></p>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end">
+<div style="position: relative; width: 100%; max-width: 640px; margin-left: auto">
+<svg class="wh" sc-camel-view-box="0 -150 640 462" width="100%" role="img" aria-label="Line drawing of the White House at evening, with the ICGE plus mark in the sky" style="display: block; overflow: visible">
+<defs>
+<pattern id="hatch" width="5" height="5" sc-camel-pattern-units="userSpaceOnUse" sc-camel-pattern-transform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#FFFFFF" stroke-width="0.7"></line></pattern>
+<pattern id="hatch2" width="3" height="3" sc-camel-pattern-units="userSpaceOnUse" sc-camel-pattern-transform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="3" stroke="#FFFFFF" stroke-width="0.6"></line></pattern>
+</defs>
+<g class="par2" aria-hidden="true">
+<sc-for list="{{crosses}}" as="c" hint-placeholder-count="7">
+<g transform="{{c.t}}"><g class="cross" style="{{c.s}}"><g class="fl" style="{{c.s}}">
+<polygon points="-4,-13 4,-13 4,-4 13,-4 13,4 4,4 4,13 -4,13 -4,4 -13,4 -13,-4 -4,-4" fill="#990100" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="miter"></polygon>
+</g></g></g>
+</sc-for>
+</g>
+<g class="par">
+<g opacity="0.5" aria-hidden="true"><g class="hatchin">
+<rect x="80" y="132" width="480" height="146" fill="url(#hatch)"></rect>
+<rect x="84" y="98" width="472" height="20" fill="url(#hatch2)"></rect>
+<polygon points="262,112 320,75 378,112" fill="url(#hatch2)"></polygon>
+<path d="{{colShade}}" fill="url(#hatch2)"></path>
+<path d="M40 307 H600 M96 310 H544" fill="none" stroke="#FFFFFF" stroke-width="0.7"></path>
+</g></g>
+<path d="{{glass}}" fill="#2A0604" stroke="none" aria-hidden="true"></path>
+<sc-for list="{{lights}}" as="w" hint-placeholder-count="21">
+<rect class="lite" x="{{w.x}}" y="{{w.y}}" width="{{w.w}}" height="{{w.h}}" style="{{w.s}}"></rect>
+</sc-for>
+<g fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path sc-camel-path-length="1" d="M0 304 H640" opacity="0.45"></path>
+<path sc-camel-path-length="1" d="M18 304 C6 278 14 248 36 244 C48 228 70 234 70 254 C80 268 72 294 62 304" opacity="0.4"></path>
+<path sc-camel-path-length="1" d="M622 304 C634 278 626 248 604 244 C592 228 570 234 570 254 C560 268 568 294 578 304" opacity="0.4"></path>
+<rect sc-camel-path-length="1" x="80" y="132" width="480" height="146"></rect>
+<rect sc-camel-path-length="1" x="72" y="118" width="496" height="14"></rect>
+<rect sc-camel-path-length="1" x="84" y="98" width="472" height="20"></rect>
+<path class="late" sc-camel-path-length="1" d="{{balusters}}" stroke-width="1" opacity="0.6"></path>
+<path class="late" sc-camel-path-length="1" d="M80 202 H244 M396 202 H560" opacity="0.6"></path>
+<path class="late" sc-camel-path-length="1" d="{{windows}}" stroke-width="1.3"></path>
+<path class="late" sc-camel-path-length="1" d="{{pediments}}" stroke-width="1.3" opacity="0.85"></path>
+<polygon sc-camel-path-length="1" points="238,118 320,64 402,118"></polygon>
+<polygon class="late" sc-camel-path-length="1" points="262,112 320,75 378,112" opacity="0.55"></polygon>
+<rect sc-camel-path-length="1" x="238" y="118" width="164" height="16"></rect>
+<path sc-camel-path-length="1" d="{{columns}}" stroke-width="1.4"></path>
+<path class="late" sc-camel-path-length="1" d="M308 278 V238 A12 12 0 0 1 332 238 V278"></path>
+<path class="late" sc-camel-path-length="1" d="M312 208 a8 8 0 1 0 16 0 a8 8 0 1 0 -16 0" opacity="0.7"></path>
+<path sc-camel-path-length="1" d="M234 280 H406 M224 288 H416 M214 296 H426"></path>
+<path class="late" sc-camel-path-length="1" d="M204 296 V262 M198 262 H210 M200 262 L203 251 H207 L210 262 M436 296 V262 M430 262 H442 M432 262 L435 251 H439 L442 262" opacity="0.7"></path>
+<path sc-camel-path-length="1" d="M320 64 V8"></path>
+<g class="flag" stroke="none" aria-hidden="true">
+<rect x="320.8" y="8" width="42" height="22.1" fill="#FFFFFF"></rect>
+<sc-for list="{{stripes}}" as="s" hint-placeholder-count="7"><rect x="320.8" y="{{s.y}}" width="42" height="1.7" fill="#B22234"></rect></sc-for>
+<rect x="320.8" y="8" width="16.8" height="11.9" fill="#3C3B6E"></rect>
+<sc-for list="{{stars}}" as="t" hint-placeholder-count="20"><circle cx="{{t.x}}" cy="{{t.y}}" r="0.55" fill="#FFFFFF"></circle></sc-for>
+<rect x="320.8" y="8" width="42" height="22.1" fill="none" stroke="#FFFFFF" stroke-width="0.6"></rect>
+</g>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="reveal" aria-labelledby="facts" style="max-width: 1200px; margin: 0 auto; padding: 44px 32px 8px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 999 1 560px; min-width: 0">
+<h2 id="facts" class="rule" style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 600; border-bottom: 2px solid #530C08; padding-bottom: 12px">Key facts</h2>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 17px; line-height: 1.55">
+<li style="padding: 14px 0; border-bottom: 1px solid #E4DFDE; display: flex; gap: 20px; align-items: baseline"><strong style="flex: none; width: 116px; font-family: 'Source Serif 4', Georgia, serif; font-size: 32px; font-weight: 600; color: #7A0A06"><span class="sr">{%wc_ind_pct%}%</span><span aria-hidden="true"><span class="count" style="--to: {%wc_ind_pct%}"></span>%</span></strong><span>of individual grants were for white-collar offenses ({%wc_ind%} of {%individual%}).</span></li>
+<li style="padding: 14px 0; border-bottom: 1px solid #E4DFDE; display: flex; gap: 20px; align-items: baseline"><strong style="flex: none; width: 116px; font-family: 'Source Serif 4', Georgia, serif; font-size: 32px; font-weight: 600; color: #7A0A06"><span class="sr">{%final_pct%}%</span><span aria-hidden="true"><span class="count" style="--to: {%final_pct%}"></span>%</span></strong><span>of individual grants in completed terms came in the president's final year ({%final_n%} of {%completed_n%}).</span></li>
+<li style="padding: 14px 0; border-bottom: 1px solid #E4DFDE; display: flex; gap: 20px; align-items: baseline"><strong style="flex: none; width: 116px; font-family: 'Source Serif 4', Georgia, serif; font-size: 32px; font-weight: 600; color: #7A0A06"><span class="sr">{%median_years%} years</span><span aria-hidden="true"><span class="count" style="--to: {%median_years%}"></span> yrs</span></strong><span>is the median time between sentencing and an individual grant.</span></li>
+<li style="padding: 14px 0; border-bottom: 1px solid #E4DFDE; display: flex; gap: 20px; align-items: baseline"><strong style="flex: none; width: 116px; font-family: 'Source Serif 4', Georgia, serif; font-size: 32px; font-weight: 600; color: #7A0A06"><span class="sr">{%fraud_wc_pct%}%</span><span aria-hidden="true"><span class="count" style="--to: {%fraud_wc_pct%}"></span>%</span></strong><span>of white-collar grants involved fraud ({%fraud_wc%} of {%wc_ind%}).</span></li>
+</ul>
+<p style="margin: 10px 0 0; font-size: 14px; color: #5A5F66">Individual grants exclude mass actions. Completed terms exclude the current Trump term. See <a href="methodology.html">methodology</a>.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; font-size: 15px; line-height: 1.5">
+<h2 class="rule" style="margin: 0; font-size: 19px; font-weight: 700; border-bottom: 2px solid #530C08; padding: 8px 0 12px">Dataset at a glance</h2>
+<sc-raw-table style="width: 100%; border-collapse: collapse">
+<sc-raw-caption class="sr">Dataset at a glance</sc-raw-caption>
+<sc-raw-tbody>
+<sc-raw-tr><sc-raw-th scope="row" style="padding: 9px 0; text-align: left; font-weight: 400; color: #3D4248">Pardons</sc-raw-th><sc-raw-td style="padding: 9px 0; text-align: right; font-weight: 600">{%pardons_all%}</sc-raw-td></sc-raw-tr>
+<sc-raw-tr style="border-top: 1px solid #E4DFDE"><sc-raw-th scope="row" style="padding: 9px 0; text-align: left; font-weight: 400; color: #3D4248">Commutations</sc-raw-th><sc-raw-td style="padding: 9px 0; text-align: right; font-weight: 600">{%commutations_all%}</sc-raw-td></sc-raw-tr>
+<sc-raw-tr style="border-top: 1px solid #E4DFDE"><sc-raw-th scope="row" style="padding: 9px 0; text-align: left; font-weight: 400; color: #3D4248">Individual grants</sc-raw-th><sc-raw-td style="padding: 9px 0; text-align: right; font-weight: 600">{%individual%}</sc-raw-td></sc-raw-tr>
+<sc-raw-tr style="border-top: 1px solid #E4DFDE"><sc-raw-th scope="row" style="padding: 9px 0; text-align: left; font-weight: 400; color: #3D4248">Grants in mass actions</sc-raw-th><sc-raw-td style="padding: 9px 0; text-align: right; font-weight: 600">{%mass%}</sc-raw-td></sc-raw-tr>
+<sc-raw-tr style="border-top: 1px solid #E4DFDE"><sc-raw-th scope="row" style="padding: 9px 0; text-align: left; font-weight: 400; color: #3D4248">Data through</sc-raw-th><sc-raw-td style="padding: 9px 0; text-align: right; font-weight: 600">{%data_through%}</sc-raw-td></sc-raw-tr>
+<sc-raw-tr style="border-top: 1px solid #E4DFDE; border-bottom: 1px solid #1F2328"><sc-raw-th scope="row" style="padding: 9px 0; text-align: left; font-weight: 400; color: #3D4248">Last checked against DOJ</sc-raw-th><sc-raw-td style="padding: 9px 0; text-align: right; font-weight: 600">{%doj_checked%}</sc-raw-td></sc-raw-tr>
+</sc-raw-tbody>
+</sc-raw-table>
+<p style="margin: 8px 0 0; font-size: 13px; color: #5A5F66">Mass actions: Jan. 6 proclamation, Obama drug commutations, Biden family pardons. A further {%biden_warrants%} Biden group-warrant commutations are reported as counts only.</p>
+</div>
+</div>
+</section>
+
+<section class="reveal" aria-labelledby="t1" style="max-width: 1200px; margin: 0 auto; padding: 40px 32px">
+<div class="rule" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; border-bottom: 2px solid #530C08; padding-bottom: 12px">
+<h2 id="t1" style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 600">White-collar share by presidential term</h2>
+<div style="display: flex; align-items: center; gap: 10px">
+<span id="modelbl" style="font-size: 15px; font-weight: 700">Show</span>
+<div role="group" aria-labelledby="modelbl" style="display: flex; border: 1px solid #530C08">
+<sc-for list="{{modes}}" as="v" hint-placeholder-count="2">
+<button type="button" sc-camel-on-click="{{v.pick}}" aria-pressed="{{v.pressed}}" style="{{v.style}}">{{v.label}}</button>
+</sc-for>
+</div>
+</div>
+</div>
+<div style="margin-top: 16px; overflow-x: auto">
+<sc-raw-table style="width: 100%; min-width: 680px; border-collapse: collapse; font-size: 16px">
+<sc-raw-caption style="caption-side: top; text-align: left; padding-bottom: 10px; font-size: 15px; color: #3D4248">Table 1. Pardons and commutations granted for white-collar offenses, by term ({{modeLabel}})</sc-raw-caption>
+<sc-raw-thead>
+<sc-raw-tr style="border-top: 1px solid #1F2328; border-bottom: 1px solid #1F2328">
+<sc-raw-th scope="col" style="padding: 9px 12px 9px 0; text-align: left; font-weight: 700; width: 140px">Term</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 9px 12px; text-align: right; font-weight: 700; width: 110px">Total grants</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 9px 12px; text-align: right; font-weight: 700; width: 110px">White collar</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 9px 12px; text-align: right; font-weight: 700; width: 80px">Share</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 9px 0 9px 16px"><span class="sr">Share, chart</span></sc-raw-th>
+</sc-raw-tr>
+</sc-raw-thead>
+<sc-raw-tbody>
+<sc-for list="{{rows}}" as="row" hint-placeholder-count="10">
+<sc-raw-tr style="border-bottom: 1px solid #E4DFDE">
+<sc-raw-th scope="row" style="padding: 9px 12px 9px 0; text-align: left; font-weight: 600"><a href="administrations.html" sc-camel-on-click="{{row.go}}" style="color: #1F2328">{{row.name}}</a></sc-raw-th>
+<sc-raw-td style="padding: 9px 12px; text-align: right">{{row.total}}</sc-raw-td>
+<sc-raw-td style="padding: 9px 12px; text-align: right">{{row.wc}}</sc-raw-td>
+<sc-raw-td style="padding: 9px 12px; text-align: right; font-weight: 700">{{row.pct}}</sc-raw-td>
+<sc-raw-td style="padding: 9px 0 9px 16px" aria-hidden="true"><div style="height: 12px; background: #EFEBEA; position: relative"><div class="growx" style="{{row.barStyle}}"></div></div></sc-raw-td>
+</sc-raw-tr>
+</sc-for>
+</sc-raw-tbody>
+</sc-raw-table>
+</div>
+<p style="margin: 12px 0 0; font-size: 14px; line-height: 1.55; color: #5A5F66">Note: {{footnote}}<br>Source: U.S. Department of Justice, Office of the Pardon Attorney; ICGE analysis.</p>
+</section>
+
+<section class="reveal" aria-labelledby="f1" style="max-width: 1200px; margin: 0 auto; padding: 8px 32px 44px">
+<h2 id="f1" class="rule" style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 600; border-bottom: 2px solid #530C08; padding-bottom: 12px">Individual grants by year, 1989–{%latest_year%}</h2>
+<figure style="margin: 16px 0 0">
+<figcaption style="font-size: 15px; color: #3D4248">Figure 1. Individual pardons and commutations by calendar year, split by white-collar determination. Peaks fall in the last months of each administration.</figcaption>
+<div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 14px; height: 14px; background: #7A0A06"></span>White collar</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span aria-hidden="true" style="width: 14px; height: 14px; background: #D3BCB9"></span>Other offenses</span>
+</div>
+<p class="mob" style="margin: 12px 0 0; font-size: 14px; color: #5A5F66">Swipe sideways to see all years.</p>
+<div style="margin-top: 12px; padding-top: 10px; overflow-x: auto" aria-hidden="true">
+<div style="min-width: 760px; display: flex; gap: 8px">
+<div style="width: 34px; flex: none; position: relative; height: 200px; font-size: 12px; color: #5A5F66; text-align: right">
+<span style="position: absolute; right: 0; top: -8px">{%axis0%}</span>
+<span style="position: absolute; right: 0; top: 42px">{%axis1%}</span>
+<span style="position: absolute; right: 0; top: 92px">{%axis2%}</span>
+<span style="position: absolute; right: 0; top: 142px">{%axis3%}</span>
+<span style="position: absolute; right: 0; top: 192px">0</span>
+</div>
+<div style="flex: 1; min-width: 0">
+<div sc-camel-on-mouse-leave="{{offYear}}" style="position: relative; display: flex; align-items: flex-end; gap: 3px; height: 200px; border-bottom: 1px solid #1F2328; border-top: 1px solid #E4DFDE; background: repeating-linear-gradient(to top, transparent 0 49px, #E4DFDE 49px 50px)">
+<sc-for list="{{years}}" as="b" hint-placeholder-count="38">
+<div class="growy" sc-camel-on-mouse-enter="{{b.on}}" style="{{b.colStyle}}">
+<div style="{{b.other}}"></div>
+<div style="{{b.wcs}}"></div>
+</div>
+</sc-for>
+<sc-if value="{{hasYear}}" hint-placeholder-val="{{ false }}">
+<div style="{{yTip.style}}">
+<div style="font-size: 16px; font-weight: 700">{{yTip.y}}</div>
+<div style="margin-top: 2px; font-size: 14px">{{yTip.t}} individual grants · <strong style="color: #7A0A06">{{yTip.w}} white collar</strong></div>
+<sc-for list="{{yTip.terms}}" as="m" hint-placeholder-count="1">
+<div style="margin-top: 6px; padding-top: 6px; border-top: 1px solid #E4DFDE; font-size: 14px"><span style="font-weight: 600">{{m.name}}</span><span style="color: #5A5F66"> · {{m.years}}</span><span style="display: block; color: #3D4248">{{m.n}}</span></div>
+</sc-for>
+</div>
+</sc-if>
+</div>
+<div style="display: flex; gap: 3px; margin-top: 6px; font-size: 12px; color: #5A5F66">
+<sc-for list="{{years}}" as="b" hint-placeholder-count="38">
+<div style="flex: 1; text-align: center; white-space: nowrap">{{b.tick}}</div>
+</sc-for>
+</div>
+<div style="display: flex; gap: 3px; margin-top: 8px">
+<sc-for list="{{bands}}" as="s" hint-placeholder-count="10">
+<div title="{{s.full}}" style="{{s.style}}">{{s.label}}</div>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+<p style="margin: 8px 0 0; font-size: 14px; color: #5A5F66">Vertical axis: number of grants. {%latest_year%} runs through {%data_through_md%}. Source: DOJ Office of the Pardon Attorney; ICGE analysis.</p>
+<details style="margin-top: 14px; font-size: 15px">
+<summary style="font-weight: 600; color: #7A0A06">View figure data as a table</summary>
+<div style="margin-top: 10px; max-height: 320px; overflow: auto; border: 1px solid #DDD6D4">
+<sc-raw-table style="width: 100%; border-collapse: collapse; font-size: 15px">
+<sc-raw-caption class="sr">Individual grants by year</sc-raw-caption>
+<sc-raw-thead><sc-raw-tr style="border-bottom: 1px solid #1F2328; background: #F5F3F2"><sc-raw-th scope="col" style="padding: 8px 12px; text-align: left">Year</sc-raw-th><sc-raw-th scope="col" style="padding: 8px 12px; text-align: left">President and term</sc-raw-th><sc-raw-th scope="col" style="padding: 8px 12px; text-align: right">Individual grants</sc-raw-th><sc-raw-th scope="col" style="padding: 8px 12px; text-align: right">White collar</sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody>
+<sc-for list="{{years}}" as="b" hint-placeholder-count="38">
+<sc-raw-tr style="border-bottom: 1px solid #E4DFDE"><sc-raw-th scope="row" style="padding: 7px 12px; text-align: left; font-weight: 400">{{b.y}}</sc-raw-th><sc-raw-td style="padding: 7px 12px; color: #3D4248">{{b.who}}</sc-raw-td><sc-raw-td style="padding: 7px 12px; text-align: right">{{b.t}}</sc-raw-td><sc-raw-td style="padding: 7px 12px; text-align: right">{{b.w}}</sc-raw-td></sc-raw-tr>
+</sc-for>
+</sc-raw-tbody>
+</sc-raw-table>
+</div>
+</details>
+</figure>
+</section>
+
+<section class="reveal" style="background: #F5F3F2; border-top: 1px solid #DDD6D4; border-bottom: 1px solid #DDD6D4">
+<div style="max-width: 1200px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 999 1 620px; min-width: 0">
+<div class="rule" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 2px solid #530C08; padding-bottom: 12px">
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 600">Most recent grants</h2>
+<a href="records.html" style="font-size: 15px; font-weight: 600">All records</a>
+</div>
+<p style="margin: 10px 0 0; font-size: 14px; color: #5A5F66">As of {%doj_checked%}, when the list was last checked against the DOJ Office of the Pardon Attorney. Includes grants through {%data_through%}.</p>
+<div style="overflow-x: auto">
+<sc-raw-table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px">
+<sc-raw-caption class="sr">Most recent clemency grants</sc-raw-caption>
+<sc-raw-thead>
+<sc-raw-tr style="border-bottom: 1px solid #1F2328; text-align: left">
+<sc-raw-th scope="col" style="padding: 11px 12px 11px 0; font-weight: 700">Date granted</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 11px 12px; font-weight: 700">Recipient</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 11px 12px; font-weight: 700">Type</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 11px 12px; font-weight: 700">Offense</sc-raw-th>
+<sc-raw-th scope="col" style="padding: 11px 0 11px 12px; font-weight: 700">White collar</sc-raw-th>
+</sc-raw-tr>
+</sc-raw-thead>
+<sc-raw-tbody>
+<sc-for list="{{recent}}" as="g" hint-placeholder-count="6">
+<sc-raw-tr style="border-bottom: 1px solid #DDD6D4; vertical-align: top">
+<sc-raw-td style="padding: 11px 12px 11px 0; white-space: nowrap">{{g.date}}</sc-raw-td>
+<sc-raw-td style="padding: 11px 12px; font-weight: 600">{{g.name}}</sc-raw-td>
+<sc-raw-td style="padding: 11px 12px">{{g.type}}</sc-raw-td>
+<sc-raw-td style="padding: 11px 12px; color: #3D4248">{{g.offense}}</sc-raw-td>
+<sc-raw-td style="padding: 11px 0 11px 12px">{{g.wc}}</sc-raw-td>
+</sc-raw-tr>
+</sc-for>
+</sc-raw-tbody>
+</sc-raw-table>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="reveal" style="max-width: 1200px; margin: 0 auto; padding: 44px 32px 52px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px 48px">
+<div class="rule" style="border-top: 2px solid #530C08; padding-top: 14px">
+<h2 style="margin: 0; font-size: 19px; font-weight: 700"><a href="methodology.html" style="color: #1F2328">Methodology</a></h2>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3D4248">The classification criteria, the rules for edge cases, how mass grants are handled and the known limits of the data.</p>
+</div>
+<div class="rule" style="border-top: 2px solid #530C08; padding-top: 14px">
+<h2 style="margin: 0; font-size: 19px; font-weight: 700"><a href="about.html#request" style="color: #1F2328">Request the data</a></h2>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3D4248">Email the Institute for the full dataset. Field definitions and the change log are on the Methodology page.</p>
+</div>
+<div class="rule" style="border-top: 2px solid #530C08; padding-top: 14px">
+<h2 style="margin: 0; font-size: 19px; font-weight: 700"><a href="about.html" style="color: #1F2328">Report a correction</a></h2>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: #3D4248">Found a record that looks wrong? Send the record number and the source, and the team will review it.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer style="background: #3A0805; color: #E8D9D7">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 32px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; font-size: 15px; line-height: 1.6">
+<div>
+<div style="font-size: 16px; font-weight: 700; color: #FFFFFF">Institute for Corporate Governance + Ethics</div>
+<p style="margin: 8px 0 0">The Institute for Corporate Governance + Ethics is a research institute aimed at harnessing the best academic research to aid scholars, policymakers, and business leaders in advancing good corporate governance and ethical business practices.</p>
+</div>
+<div>
+<div style="font-weight: 700; color: #FFFFFF">Database</div>
+<div style="margin-top: 8px; display: flex; flex-direction: column; gap: 4px">
+<a href="records.html" style="color: #E8D9D7">Search records</a>
+<a href="administrations.html" style="color: #E8D9D7">By administration</a>
+<a href="classification.html" style="color: #E8D9D7">By classification</a>
+<a href="methodology.html" style="color: #E8D9D7">Methodology</a>
+</div>
+</div>
+<div>
+<div style="font-weight: 700; color: #FFFFFF">Contact</div>
+<p style="margin: 8px 0 0">Questions and corrections:<br><a href="mailto:ICG@iu.edu" style="color: #FFFFFF">ICG@iu.edu</a></p>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 32px 22px; border-top: 1px solid rgba(255,255,255,0.18); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #CDBCB9">
+<span>© 2026 Institute for Corporate Governance + Ethics. An independent research project, not affiliated with the White House or the U.S. Department of Justice.</span>
+<span style="display: flex; flex-wrap: wrap; gap: 18px"><a href="about.html#accessibility" style="color: #E8D9D7">Accessibility</a><a href="methodology.html#terms" style="color: #E8D9D7">Terms of use</a></span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#7A0A06&quot;,&quot;options&quot;:[&quot;#7A0A06&quot;,&quot;#990100&quot;,&quot;#3D4248&quot;]},&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:3600}}">
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { mode: 'ind', hq: '' }; }
+  renderVals() {
+    var self = this;
+    var accent = this.props.accent ?? '#7A0A06';
+    var keys = { 'GHW Bush': 'ghwb', 'Clinton I': 'clinton1', 'Clinton II': 'clinton2', 'GW Bush I': 'gwb1', 'GW Bush II': 'gwb2', 'Obama I': 'obama1', 'Obama II': 'obama2', 'Trump I': 'trump1', 'Biden': 'biden', 'Trump II': 'trump2' };
+    var ind = {%json:ind_rows%};
+    var all = {%json:all_rows%};
+    var isInd = this.state.mode === 'ind';
+    var rows = (isInd ? ind : all).map(function (r) {
+      var p = Math.round(100 * r[2] / r[1]);
+      return { name: r[0], total: r[1].toLocaleString('en-US'), wc: r[2].toLocaleString('en-US'), pct: p + '%',
+        barStyle: 'position: absolute; left: 0; top: 0; bottom: 0; width: ' + p + '%; background: ' + accent,
+        go: function () { try { window.sessionStorage.setItem('pcd.admin', keys[r[0]]); } catch (e) {} } };
+    });
+    var Y = [[1989,10,6],[1990,0,0],[1991,30,18],[1992,24,7],[1993,14,12],[1994,42,29],[1995,15,9],[1996,0,0],[1997,23,9],[1998,32,13],[1999,52,20],[2000,122,69],[2001,177,111],[2002,7,4],[2003,4,2],[2004,20,15],[2005,40,15],[2006,45,21],[2007,31,13],[2008,33,16],[2009,20,10],[2010,9,5],[2011,14,6],[2012,0,0],[2013,30,19],[2014,15,7],[2015,11,3],[2016,116,70],[2017,100,66],[2018,9,6],[2019,13,7],[2020,70,47],[2021,144,80],[2022,89,6],[2023,48,6],[2024,100,30],[2025,198,50],[2026,78,48]];
+    var max = {%json:year_axis_max%};
+    var TN = { 'GHW Bush': ['George H. W. Bush', '1989–1993'], 'Clinton I': ['Bill Clinton, 1st term', '1993–1997'], 'Clinton II': ['Bill Clinton, 2nd term', '1997–2001'], 'GW Bush I': ['George W. Bush, 1st term', '2001–2005'], 'GW Bush II': ['George W. Bush, 2nd term', '2005–2009'], 'Obama I': ['Barack Obama, 1st term', '2009–2013'], 'Obama II': ['Barack Obama, 2nd term', '2013–2017'], 'Trump I': ['Donald Trump, 1st term', '2017–2021'], 'Biden': ['Joe Biden', '2021–2025'], 'Trump II': ['Donald Trump, 2nd term', '2025–present'] };
+    var BY = { 1989: { 'GHW Bush': 10 }, 1990: { 'GHW Bush': 0 }, 1991: { 'GHW Bush': 30 }, 1992: { 'GHW Bush': 24 }, 1993: { 'GHW Bush': 14, 'Clinton I': 0 }, 1994: { 'Clinton I': 42 }, 1995: { 'Clinton I': 15 }, 1996: { 'Clinton I': 0 }, 1997: { 'Clinton II': 23 }, 1998: { 'Clinton II': 32 }, 1999: { 'Clinton II': 52 }, 2000: { 'Clinton II': 122 }, 2001: { 'Clinton II': 177, 'GW Bush I': 0 }, 2002: { 'GW Bush I': 7 }, 2003: { 'GW Bush I': 4 }, 2004: { 'GW Bush I': 20 }, 2005: { 'GW Bush II': 40 }, 2006: { 'GW Bush II': 45 }, 2007: { 'GW Bush II': 31 }, 2008: { 'GW Bush II': 33 }, 2009: { 'GW Bush II': 20, 'Obama I': 0 }, 2010: { 'Obama I': 9 }, 2011: { 'Obama I': 14 }, 2012: { 'Obama I': 0 }, 2013: { 'Obama II': 30 }, 2014: { 'Obama II': 15 }, 2015: { 'Obama II': 11 }, 2016: { 'Obama II': 116 }, 2017: { 'Obama II': 98, 'Trump I': 2 }, 2018: { 'Trump I': 9 }, 2019: { 'Trump I': 13 }, 2020: { 'Trump I': 70 }, 2021: { 'Trump I': 144, 'Biden': 0 }, 2022: { 'Biden': 89 }, 2023: { 'Biden': 48 }, 2024: { 'Biden': 100 }, 2025: { 'Biden': 18, 'Trump II': 180 }, 2026: { 'Trump II': 78 } };
+    var hy = this.state.hy, hasYear = typeof hy === 'number';
+    var years = Y.map(function (y, idx) {
+      var wcH = (100 * y[2] / max).toFixed(2), oH = (100 * (y[1] - y[2]) / max).toFixed(2);
+      var ks = Object.keys(BY[y[0]] || {});
+      return { y: String(y[0]), t: y[1], w: y[2], tick: (y[0] - 1989) % 4 === 0 ? String(y[0]) : '',
+        who: ks.map(function (k) { return TN[k][0]; }).join('; '),
+        colStyle: 'flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; cursor: default; transition: opacity .15s; opacity: ' + (hasYear && hy !== idx ? '0.35' : '1'),
+        on: function () { if (self.state.hy !== idx) self.setState({ hy: idx }); },
+        tip: y[0] + ': ' + y[1] + ' grants, ' + y[2] + ' white collar' + (y[0] === {%json:latest_year%} ? {%json:partial_note%} : ''),
+        wcs: 'height: ' + wcH + '%; background: ' + accent, other: 'height: ' + oH + '%; background: #D3BCB9' };
+    });
+    // White House drawing
+    var bal = '';
+    for (var x = 92; x <= 548; x += 8) { if (x < 240 || x > 400) bal += 'M' + x + ' 101 V115 '; }
+    var cs = [96, 126, 156, 186, 216, 424, 454, 484, 514, 544], win = '', ped = '', glass = '', lights = [];
+    cs.forEach(function (c, i) {
+      var rank = i < 5 ? 4 - i : i - 5;
+      win += 'M' + (c - 10) + ' 148 h20 v40 h-20 Z M' + c + ' 148 v40 M' + (c - 10) + ' 168 h20 ';
+      win += 'M' + (c - 10) + ' 220 h20 v48 h-20 Z M' + c + ' 220 v48 M' + (c - 10) + ' 244 h20 ';
+      glass += 'M' + (c - 10) + ' 148 h20 v40 h-20 Z M' + (c - 10) + ' 220 h20 v48 h-20 Z ';
+      ped += 'M' + (c - 12) + ' 144 H' + (c + 12) + ' ';
+      ped += (i % 2 === 0) ? ('M' + (c - 12) + ' 215 L' + c + ' 207 L' + (c + 12) + ' 215 Z ') : ('M' + (c - 12) + ' 215 Q' + c + ' 202 ' + (c + 12) + ' 215 Z ');
+      lights.push({ x: c - 10, y: 220, w: 20, h: 48, s: '--d: ' + (2.4 + rank * 0.14).toFixed(2) + 's' });
+      lights.push({ x: c - 10, y: 148, w: 20, h: 40, s: '--d: ' + (3.1 + rank * 0.14).toFixed(2) + 's' });
+    });
+    glass += 'M308 278 V238 A12 12 0 0 1 332 238 V278 Z';
+    lights.push({ x: 309, y: 240, w: 22, h: 38, s: '--d: 2.2s' });
+    var colShade = '';
+    [254, 288, 352, 386].forEach(function (c) { colShade += 'M' + (c + 1) + ' 140 h4 v130 h-4 Z '; });
+    var IND = {%json:ind_by_term%}, IMAX = {%json:ind_max%};
+    var TT = [['G.H.W. Bush', 'George H. W. Bush', '1989–1993', 'GHW Bush', 'ghwb'], ['Clinton I', 'Bill Clinton, first term', '1993–1997', 'Clinton I', 'clinton1'], ['Clinton II', 'Bill Clinton, second term', '1997–2001', 'Clinton II', 'clinton2'], ['G.W. Bush I', 'George W. Bush, first term', '2001–2005', 'GW Bush I', 'gwb1'], ['G.W. Bush II', 'George W. Bush, second term', '2005–2009', 'GW Bush II', 'gwb2'], ['Obama I', 'Barack Obama, first term', '2009–2013', 'Obama I', 'obama1'], ['Obama II', 'Barack Obama, second term', '2013–2017', 'Obama II', 'obama2'], ['Trump I', 'Donald Trump, first term', '2017–2021', 'Trump I', 'trump1'], ['Biden', 'Joe Biden', '2021–2025', 'Biden', 'biden'], ['Trump II', 'Donald Trump, second term', '2025–present', 'Trump II', 'trump2']].map(function (t) { return [t[0], t[1], t[2], IND[t[3]][0], IND[t[3]][1], t[4]]; });
+    var hv = this.state.hov, hasHov = typeof hv === 'number';
+    var terms = TT.map(function (t, i) {
+      var rank = i < 5 ? 4 - i : i - 5;
+      return { x: cs[i] - 10, cls: hv === i ? 'tw on' : 'tw',
+        s: '--o: ' + (0.14 + 0.62 * t[3] / IMAX).toFixed(3) + '; --d: ' + (2.4 + rank * 0.14).toFixed(2) + 's',
+        aria: t[1] + ', ' + t[2] + ': ' + t[3] + ' individual grants, ' + Math.round(100 * t[4] / t[3]) + ' percent white collar. View this term.',
+        on: function () { if (self.state.hov !== i) self.setState({ hov: i }); },
+        go: function () { try { window.sessionStorage.setItem('pcd.admin', t[5]); } catch (e) {} } };
+    });
+    var hov = hasHov ? { label: TT[hv][1], years: TT[hv][2], n: TT[hv][3], pct: Math.round(100 * TT[hv][4] / TT[hv][3]) + '%' } : {};
+    var tipLeft = hasHov ? Math.min(84, Math.max(16, 100 * cs[hv] / 640)) : 50;
+    var tipStyle = 'position: absolute; left: ' + tipLeft.toFixed(1) + '%; top: ' + (100 * 368 / 462).toFixed(1) + '%; transform: translate(-50%, calc(-100% - 10px)); min-width: 200px; padding: 10px 14px; background: #FFFFFF; color: #1F2328; border-top: 3px solid #990100; box-shadow: 0 8px 24px rgba(0,0,0,0.28); pointer-events: none; z-index: 5; line-height: 1.35';
+    var bridge = TT.map(function (t) {
+      var sc = t[3] / IMAX;
+      return { label: t[0], n: t[3],
+        headStyle: 'width: 84%; --dy: ' + ((1 - sc) * 300).toFixed(1) + 'px',
+        shaftStyle: '--s: ' + sc.toFixed(4) + '; position: relative; width: 66%; height: 300px; background: repeating-linear-gradient(90deg, #F1ECEA 0 5px, #D6CCC9 5px 6px); box-shadow: inset 1px 0 0 #C9BEBB, inset -1px 0 0 #C9BEBB' };
+    });
+    var days = Math.max(0, Math.floor((Date.now() - Date.UTC({%doj_utc_args%}, 16)) / 86400000));
+    var checkedAgo = days === 0 ? 'today' : (days === 1 ? 'yesterday' : days + ' days ago');
+    var col = '';
+    [254, 288, 352, 386].forEach(function (c) {
+      col += 'M' + (c - 5) + ' 140 V270 M' + (c + 5) + ' 140 V270 M' + (c - 9) + ' 134 H' + (c + 9) + ' M' + (c - 7) + ' 140 H' + (c + 7) + ' M' + (c - 9) + ' 278 H' + (c + 9) + ' M' + (c - 7) + ' 270 H' + (c + 7) + ' ';
+    });
+    var crosses = [[96, -96, 1.15, 0.6, 6.5], [204, -28, 0.7, 0.9, 5.2], [470, -116, 1.0, 1.2, 7.0], [574, -40, 1.3, 1.5, 6.0], [400, -10, 0.55, 1.8, 4.8], [36, 40, 0.6, 2.1, 5.6], [612, 70, 0.5, 2.4, 6.4]].map(function (c) {
+      return { t: 'translate(' + c[0] + ' ' + c[1] + ') scale(' + c[2] + ')', s: '--d: ' + c[3] + 's; --f: ' + c[4] + 's' };
+    });
+    var stripes = [0, 2, 4, 6, 8, 10, 12].map(function (i) { return { y: (8 + i * 1.7).toFixed(2) }; });
+    var stars = [];
+    for (var r = 0; r < 5; r++) { for (var q = 0; q < (r % 2 ? 4 : 5); q++) { stars.push({ x: (322.6 + q * 3.3 + (r % 2 ? 1.65 : 0)).toFixed(2), y: (9.7 + r * 2.1).toFixed(2) }); } }
+    var yTip = {};
+    if (hasYear) {
+      var yy = Y[hy], by = BY[yy[0]] || {};
+      var left = Math.min(78, Math.max(0, (hy + 0.5) / Y.length * 100 - 11));
+      yTip = { y: String(yy[0]) + (yy[0] === {%json:latest_year%} ? {%json:partial_note%} : ''), t: yy[1], w: yy[2],
+        terms: Object.keys(by).map(function (k) { return { name: TN[k][0], years: TN[k][1], n: by[k] === 1 ? '1 grant' : by[k] + ' grants' }; }),
+        style: 'position: absolute; top: 6px; left: ' + left.toFixed(1) + '%; width: 22%; min-width: 210px; padding: 10px 12px; background: #FFFFFF; color: #1F2328; border: 1px solid #DDD6D4; border-top: 3px solid #990100; box-shadow: 0 6px 18px rgba(0,0,0,0.16); pointer-events: none; line-height: 1.35; z-index: 3' };
+    }
+    var bandDef = {%json:bands%};
+    var shortName = { 'GHW Bush': 'G.H.W. Bush', 'Clinton I': 'Clinton I', 'Clinton II': 'Clinton II', 'GW Bush I': 'Bush I', 'GW Bush II': 'Bush II', 'Obama I': 'Obama I', 'Obama II': 'Obama II', 'Trump I': 'Trump I', 'Biden': 'Biden', 'Trump II': 'Trump II' };
+    var bands = bandDef.map(function (d, i) {
+      return { label: shortName[d[0]], full: TN[d[0]][0] + ', ' + TN[d[0]][1],
+        style: 'flex: ' + d[1] + ' 1 0; min-width: 0; padding: 5px 2px; font-size: 11px; font-weight: 600; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #3D2422; background: ' + (i % 2 ? '#EFE3E1' : '#F7EFEE') + '; border-top: 2px solid ' + (i % 2 ? '#7A0A06' : '#C9A9A6') };
+    });
+    var recent = {%json:recent%}.map(function (g) { return { date: g[0], name: g[1], type: g[2], offense: g[3], wc: g[4] }; });
+    return {
+      menuOpen: this.state.menuOpen ? 'true' : 'false', navClass: this.state.menuOpen ? 'nav open' : 'nav',
+      toggleMenu: function () { self.setState({ menuOpen: !self.state.menuOpen }); },
+      rows: rows, recent: recent, years: years, mode: this.state.mode, hq: this.state.hq,
+      hasYear: hasYear, yTip: yTip, bands: bands,
+      offYear: function () { if (self.state.hy != null) self.setState({ hy: null }); },
+      balusters: bal, windows: win, pediments: ped, columns: col, lights: lights, crosses: crosses, stripes: stripes, stars: stars,
+      glass: glass, colShade: colShade, terms: terms, hasHov: hasHov, hov: hov, tipStyle: tipStyle, bridge: bridge, checkedAgo: checkedAgo,
+      off: function () { if (self.state.hov != null) self.setState({ hov: null }); },
+      modeLabel: isInd ? 'individual grants' : 'all recorded grants',
+      setMode: function (e) { self.setState({ mode: e.target.value }); },
+      modes: [['ind', 'Individual grants'], ['all', 'All recorded grants']].map(function (v) { var on = self.state.mode === v[0]; return { label: v[1], pressed: on ? 'true' : 'false', style: 'min-height: 44px; padding: 0 18px; font: 600 15px \'Source Sans 3\', Arial, sans-serif; border: 0; cursor: pointer; background: ' + (on ? '#530C08; color: #FFFFFF' : '#FFFFFF; color: #530C08'), pick: function () { self.setState({ mode: v[0] }); } }; }),
+      setHq: function (e) { self.setState({ hq: e.target.value }); },
+      goSearch: function () {
+        var p = JSON.stringify({ q: self.state.hq || '', t: Date.now() });
+        try { window.localStorage.setItem('pcd.q', p); } catch (e) {}
+        try { window.sessionStorage.setItem('pcd.q', p); } catch (e) {}
+      },
+      setSearchLink: function (el) { self.searchLink = el; },
+      noSubmit: function (e) { if (e && e.preventDefault) e.preventDefault(); },
+      keySearch: function (e) {
+        if (!e || e.key !== 'Enter' || (e.nativeEvent && e.nativeEvent.isComposing)) return;
+        e.preventDefault();
+        var input = e.currentTarget || e.target;
+        var q = input && typeof input.value === 'string' ? input.value : (self.state.hq || '');
+        var p = JSON.stringify({ q: q, t: Date.now() });
+        try { window.localStorage.setItem('pcd.q', p); } catch (err) {}
+        try { window.sessionStorage.setItem('pcd.q', p); } catch (err) {}
+        var link = self.searchLink || (input && input.parentNode && input.parentNode.querySelector('a.btn'));
+        if (link) link.click();
+      },
+      footnote: isInd
+        ? 'Excludes the Jan. 6 proclamation, Biden family pardons and Obama drug commutations. Biden group-warrant commutations of Dec. 12, 2024 and Jan. 17, 2025 are not recorded individually.'
+        : 'Includes the Jan. 6 proclamation ({%j6_total%} grants), Obama drug commutations ({%obama_drug_total%}) and Biden family pardons ({%biden_family_total%}). Biden group-warrant commutations are not recorded individually.'
+    };
+  }
+}
+</script>
+
+
+</body></html>
